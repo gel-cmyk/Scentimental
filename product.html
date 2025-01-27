@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scentimental</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+
+
+    <!-- swiper link  -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@latest/swiper-bundle.min.js"></script>
+
+<!-- Swiper CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@latest/swiper-bundle.min.css">
+
+    <!-- cdn icon link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- custom css file  -->
+    <link rel="stylesheet" href="product.css">
+
+</head>
+
+<body>
+
+    <!-- header section start here  -->
+    <header class="header">
+        <div class="logoContent">
+            <a href="#" class="logo">
+                <img src="assets/Scentimental (2).png" alt="" width="200" height="500">
+            </a>
+            <h1 class="logoName"></h1>
+        </div>
+
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="product.html">Product</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+        <div class="icon">
+            <i class="fas fa-search" id="search"></i>
+        </div>
+
+        <div class="search">
+            <input type="search" placeholder="search...">
+        </div>
+    </header>
+ <!-- Trigger Button -->
+ <button id="triggerCheckout">Proceed to Checkout</button>
+
+ <!-- Checkout Form -->
+<form id="checkoutForm">
+  <h2>Checkout</h2>
+  <button type="button" id="closeForm" style="float: right;">&times;</button> <!-- Close Button -->
+  
+  <label for="name">Name:</label>
+  <input type="text" id="name" name="name" required>
+
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email" required>
+
+  <label for="address">Address:</label>
+  <textarea id="address" name="address" required></textarea>
+
+  <button type="submit">Submit</button>
+</form>
+
+   <!-- Product Section -->
+   <section class="products-section">
+    <h2 class="section-title">Our Products</h2>
+    <div class="product-grid">
+      <!-- Product 1 -->
+      <div class="product-card">
+        <img src="assets/first love.png" alt="Product 1">
+        <h3>First Love</h3>
+        <br>
+        <p>Relive the magic of your first fluttering heartbeat with "First Love." This enchanting blend captures the innocence and exhilaration of newfound affection that feels like falling in love again.
+        </p>
+        <br>
+        <p>Price: ₱94.00</p>
+        <button onclick="addToCart('Product 1', 500.00)">Add to Cart</button>
+      </div>
+      <!-- Product 2 -->
+      <div class="product-card">
+        <img src="assets/embrace.png" alt="Product 2">
+        <h3>Embrace</h3>
+        <p>Wrap yourself in the comforting warmth of "Embrace." It is a tender reminder of a heartfelt hug, perfect for moments of serenity and connection.
+        </p>
+        <br>
+        <p>Price: ₱94.00</p>
+        <button onclick="addToCart('Product 2', 750.00)">Add to Cart</button>
+      </div>
+      <!-- Product 3 -->
+      <div class="product-card">
+        <img src="assets/blissful.png" alt="Product 3">
+        <h3>Blissful</h3>
+        <p>Experience pure joy with "Blissful," a bright and uplifting scent that radiates happiness and a fragrance that feels like sunshine on your skin and laughter in the air.</p>
+        <br>
+        <p>Price: ₱94.00</p>
+        <button onclick="addToCart('Product 3', 1000.00)">Add to Cart</button>
+      </div>
+      <div class="product-card">
+        <img src="assets/eternity.png" alt="Product 3">
+        <h3>Eternity</h3>
+        <p>Timeless and profound, "Eternity" evokes the beauty of forever. A scent that lingers endlessly, much like a cherished memory.<p>
+        <br>
+        <p>Price: ₱94.00</p>
+        <button onclick="addToCart('Product 3', 1000.00)">Add to Cart</button>
+      </div>
+      <div class="product-card">
+        <img src="assets/solace.png" alt="Product 3">
+        <h3>Solace</h3>
+        <p>Rediscover your inner calm with "Solace." This sophisticated scent is designed for moments of quiet strength, it’s the perfect companion for unwinding and recharging after a long day.
+
+        </p>
+        <br>
+        <p>Price: ₱94.00</p>
+        <button onclick="addToCart('Product 3', 1000.00)">Add to Cart</button>
+      </div>
+      <div class="product-card">
+        <img src="assets/first glance.png" alt="Product 3">
+        <h3>First Glance</h3>
+        <p>Make a powerful first impression with "First Glance." A captivating blend of a bold, magnetic scent that leaves an unforgettable mark. </p>
+        <br>
+        <p>Price: ₱94.00</p>
+        <button onclick="addToCart('Product 3', 1000.00)">Add to Cart</button>
+      </div>
+      <div class="product-card">
+        <img src="assets/vow.png" alt="Product 3">
+        <h3>Vow</h3>
+        <p>"Vow" is a fragrance of unshakable loyalty and strength. This scent symbolizes commitment and integrity—ideal for the modern man who honors his word.</p>
+        <br>
+        <p>Price: ₱94.00</p>
+        <button onclick="addToCart('Product 3', 1000.00)">Add to Cart</button>
+      </div>
+      <div class="product-card">
+        <img src="assets/timeless.png" alt="Product 3">
+        <h3>Timeless</h3>
+        <p>"Timeless" embodies classic refinement and enduring elegance. Creating a sophisticated scent that transcends trends and stands the test of time.
+        </p>
+        <br>
+        <p>Price: ₱94.00</p>
+        <button onclick="addToCart('Product 3', 1000.00)">Add to Cart</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cart Section -->
+  <section class="cart-section">
+    <h2>Shopping Cart</h2>
+    <div id="cart-items">
+      <p>Your cart is empty.</p>
+    </div>
+    <p>Total: ₱<span id="cart-total">0.00</span></p>
+    <button id="checkoutButton">Checkout</button>
+  </section>
+
+  <!-- Checkout Form -->
+  <div id="checkoutForm">
+    <h2>Checkout</h2>
+    <textarea id="cartSummary" readonly></textarea>
+    <p>Total: ₱<span id="checkoutTotal"></span></p>
+    <label for="customerName">Name:</label>
+    <input type="text" id="customerName" placeholder="Your Name" required>
+    <label for="customerAddress">Address:</label>
+    <textarea id="customerAddress" placeholder="Your Address" required></textarea>
+    <button type="button" id="confirmCheckout">Place Order</button>
+    <button type="button" id="closeForm">Close</button>
+  </div>
+
+
+    <button id="backToTop" class="back-to-top"><i class="fas fa-arrow-up"></i></button>
+    
+
+ <!-- Footer -->
+ <footer class="footer">
+  <div class="content">
+    <!-- Logo -->
+    <a href="#"><img src="assets/Scentimental__2_-removebg-preview.png" alt="Logo" width="180"></a>
+    <h3>Connect With Us</h3>
+
+    <!-- Social Links -->
+    <div class="social-links">
+      <a href="#" class="fab fa-facebook-f" aria-label="Facebook"></a>
+      <a href="#" class="fab fa-twitter" aria-label="fa-youtube"></a>
+      <a href="#" class="fab fa-instagram" aria-label="Instagram"></a>
+    </div>
+  </div>
+  <p>© 2025 Scentimental. All rights reserved.</p>
+</footer>
+
+
+      <!-- swiper js link  -->
+      <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+      <!-- custom js file  -->
+      <script src="product.js"></script>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <script>
+      (function(){if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...arguments)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}const onLoad=function(){const script=document.createElement("script");script.src="https://www.chatbase.co/embed.min.js";script.id="KEjKVQ80GNf3NhWZHjR2T";script.domain="www.chatbase.co";document.body.appendChild(script)};if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}})();
+      </script>
+    
+</body>
+
+
+</html>
+

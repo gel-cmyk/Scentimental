@@ -1,0 +1,428 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+
+:root {
+    --black: #ffffff;
+    --white: #00113e;
+    --box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+
+
+body {
+        margin: 0%;
+        font-family: 'Cormorant Garamond', serif;
+        background-color: rgba(0, 0, 0, 0.377);
+        align-items: center;
+        justify-content: center;
+}
+
+html{
+    font-size: 62.5%;  
+    overflow-x: hidden;
+    scroll-padding-top: 7rem;
+    scroll-behavior: smooth;
+}
+html::-webkit-scrollbar{
+    width: .8rem;
+}
+html::-webkit-scrollbar-track{
+    background: whitesmoke;
+}
+html::-webkit-scrollbar-thumb{
+    background-color: var(--white);
+    border-radius: 5rem;
+}
+
+
+.header{
+    top: 0;right: 0;left: 0;
+    background-color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    padding: 1.4rem 7%;
+    z-index: 999;
+    font-family: 'Arial' sans-serif;
+}
+.header .logoContent{
+    display: flex;
+    align-items: center;
+    
+}
+.header .logoContent .logo img{
+    height: 4rem;
+}
+.header .logoContent .logoName {
+    color: var(--black);
+    font-size: 2rem;
+    font-weight: bolder;
+}
+
+
+.header .navbar a{
+    font-size: 2rem;
+    margin-right: 3rem;
+    color: var(--black);
+    
+}
+.header .navbar a:hover{
+    border-bottom: .1rem solid var(--black);
+    padding-bottom: .4rem;
+}
+.header .icon i{
+    font-size: 2rem;
+    margin-right: 2rem;
+    color: var(--black);
+    cursor: pointer;
+}
+
+
+.header .search{
+    display: none;
+    top: 100%;
+    margin: 1.5rem 7%;
+    background-color: whitesmoke;
+    width: 50%;
+    right: 0;
+    height: 5rem;
+    position:  absolute;
+
+
+}
+.header .search input{
+    width: 100%;
+    height: 100%;
+    font-size: 1.5rem;
+    background-color: var(--white);
+    color: var(--black);
+    margin-right: 7%;
+    border-radius: 1rem;
+    padding: 0.5rem 1rem;
+    box-shadow: var(--box-shadow);
+}
+.header .search.active{
+    display: inline-block;
+}
+#menu-bar{
+    display: none;
+}
+
+.navbar a {
+    text-decoration: none;
+    margin: 0 15px;
+    color: #ebebebb4;
+    font-size: 5px
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+    background-image: url(assets/3.png);
+    height: 450px;
+}
+
+.about-image 
+
+.about-text {
+    max-width: 50%;
+}
+
+.about-text h1 {
+    font-size: 36px;
+    color: #ffffff;
+}
+
+.about-text p {
+    margin: 10px 0;
+    color: #ffffff;
+    line-height: 1.6;
+    font-size: 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color:#022a99c2;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.about-image img {
+    width: 450px;
+    border-radius: 10px;
+
+    
+}
+
+.about-section {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.about-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color:  rgb(230, 218, 1)
+}
+  
+  .about {
+    padding: 50px 0;
+    background-color: #00113e;
+  }
+  
+  .about-content {
+    display: flex;
+    gap: 20px;
+    color: #f5f5f5;
+    font-size: 18px;
+  }
+  
+  .about-content img {
+    width: 40%;
+    border-radius: 10px;
+  }
+  
+  .about-content div {
+    flex: 1;
+  }
+
+  
+  .team-section {
+    text-align: center;
+    padding: 50px;
+    background-image: url(assets/2.png);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.team-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #ffffff;
+}
+
+.team-container {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.team-card {
+    perspective: 1000px;
+    width: 300px;
+    height: 290px;
+    
+
+}
+
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.6s ease-in-out;
+}
+
+.card-front {
+    background:#00113e;
+    border: 1px solid #ffffff65;
+
+}
+
+.card-front img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.card-front h3 {
+    margin: 10px 0;
+    font-size: 1.5rem;
+    color: #ffffff;
+}
+
+.card-front p {
+    color: #ffffff;
+    font-size: 2rem;
+}
+
+.card-back {
+    background: #00113e;
+    color: #fff;
+    transform: rotateY(180deg);
+    text-align: center;
+}
+
+.card-back h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.card-back p {
+    margin-bottom: 20px;
+    line-height: 1.5;
+    font-size: 2rem;
+}
+
+.social-links {
+    display: flex;
+    gap: 10px;
+}
+
+.social-link {
+    text-decoration: none;
+    color: #ffcc00;
+    font-size: 1.2rem;
+    border: 1px solid #ffcc00;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.social-link:hover {
+    background: #ffcc00;
+    color: #333;
+}
+
+.team-card:hover .card-front {
+    transform: rotateY(180deg);
+}
+
+.team-card:hover .card-back {
+    transform: rotateY(0deg);
+}
+
+.team-card {
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease-in-out;
+}
+
+
+/* Style for the Back to Top button */
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #08002c; /* Button background color */
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 50%;
+  font-size: 15px; /* Adjust size to make the arrow prominent */
+  cursor: pointer;
+  display: none; /* Hidden by default */
+  z-index: 1000; /* Ensures it's always on top */
+  transition: opacity 0.3s ease;
+  text-align: center; /* Centers the icon */
+}
+
+.back-to-top:hover {
+  background-color: #7647b4;
+}
+
+.back-to-top i {
+  pointer-events: none; /* Ensures the icon doesn't block clicks */
+}
+    
+.faq {
+    background-color:rgb(0, 17, 62);
+    padding: 50px;
+    height: 50rem;
+    
+}
+
+.faq h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #ffffff;
+    font-size: 2rem;
+}
+
+.faq-container {
+    max-width: 700px;
+    margin: auto;
+    height: 1rem;
+    margin-top: 5rem;
+    
+
+}
+
+.faq-item {
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.faq-question {
+    padding: 15px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    font-size: 1.5rem;
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    padding: 0 15px;
+    background-color: #f9f9f9;
+
+    
+}
+
+.faq-answer p {
+    padding: 15px;
+    color: #000000;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.footer {
+    text-align: center;
+    background-color: #00175e;
+    color: #fff;
+    padding: 20px;
+   
+}
+
+.social-links {
+    display: flex; /* Use Flexbox for centering */
+    justify-content: center; /* Horizontally centers items */
+    align-items: center; /* Vertically centers items if needed */
+    gap: 10px; /* Space between links */
+}
+
+.social-links a {
+    color: #fff;
+    font-size: 30px;
+    text-decoration: none; /* Removes underline */
+    border: 1px solid #fff; /* Optional: Border for better visuals */
+    padding: 10px;
+    border-radius: 5px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.social-links a:hover {
+    background: #ffcc00;
+    color: #00175e;
+}
